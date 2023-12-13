@@ -24,10 +24,14 @@
 ### 11.回到程式碼中將所需的時間迴圈及資料範圍進行修改，以下是需要修改的範圍
 ![螢幕擷取畫面 2023-12-13 154830](https://github.com/Filieka/Line_script/assets/144932126/983aa946-8979-43f7-8535-027317565374)
 ### 12.照著下面的說明修改，修改完按下ctrl+s儲存
-![未命名繪圖](https://github.com/Filieka/Line_script/assets/144932126/26a50a5c-bb12-4607-9930-d3aa2d60b4e7)
+![未命名繪圖](https://github.com/Filieka/Line_script/assets/144932126/8ed13e15-57ba-4e0d-b777-80c2a3fdf848)
 ### 13.從左邊選擇觸發條件
 ![螢幕擷取畫面 2023-12-13 230456](https://github.com/Filieka/Line_script/assets/144932126/3c11894b-e95e-495a-be71-5f36feaa096b)
 ### 14.`部署`->`新增部署作業`
 ![螢幕擷取畫面 2023-12-13 232516](https://github.com/Filieka/Line_script/assets/144932126/bdc574c1-8a03-4d06-8100-9c7d1f158b84)
 ### 15.`選取類型`->`網頁應用程式`->`部署`
 ![螢幕擷取畫面 2023-12-13 233012](https://github.com/Filieka/Line_script/assets/144932126/a6b45a8e-9c86-482d-a56e-7db7e15867d4)
+### 16.`新增部署條件`->執行功能選擇`doPost1`->應執行的部署作業選擇`上端`->活動來源選擇`時間驅動`->觸發條件鉉則使用的最小時間單位->`儲存`
+![螢幕擷取畫面 2023-12-13 234241](https://github.com/Filieka/Line_script/assets/144932126/7e6b2917-9b02-455d-93f5-bdf3277a8b38)
+### 17.回到試算表輸入時間及提醒內容就完成了
+![螢幕擷取畫面 2023-12-13 235009](https://github.com/Filieka/Line_script/assets/144932126/5566c7d9-e10f-4f9a-9077-36e6998c9a87)
