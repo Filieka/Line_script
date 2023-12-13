@@ -16,9 +16,10 @@
 ### 7.貼上從[code](https://github.com/Filieka/Line_script/blob/main/code)複製的所有程式碼
 ![螢幕擷取畫面 2023-12-13 150743](https://github.com/Filieka/Line_script/assets/144932126/1fe079d8-6ebf-4bfd-88fc-cfd5e379e2cc)
 ### 8.找到"Your Token"，將剛剛得到的權杖貼上
-![螢幕擷取畫面 2023-12-13 150743](https://github.com/Filieka/Line_script/assets/144932126/1aaff29b-e6ba-415b-926b-00c36ba10fba)
+![螢幕擷取畫面 2023-12-13 150908](https://github.com/Filieka/Line_script/assets/144932126/a6c32b8c-b9bc-41ac-9ed7-d3f25f84c419)
 ### 9.回到試算表複製網址的這一段，貼到程式碼中的'sheet id'，下方的名稱可以更改，改完之後到程式碼中的'sheet name'打上一樣的名稱
 ![螢幕擷取畫面 2023-12-13 152425](https://github.com/Filieka/Line_script/assets/144932126/6570a793-5395-4cac-bb96-afb15571c5fb)
 ### 10.將試算表的第一列打上想要的標題，不一定要每個都打，可以根據自己想要的規律選擇需要的數據，程式提供，年，月，日，星期，時間(***注意!月，日，時間的格式必須保持位數固定，建議利用工具列中的"格式"->"數值"->"自訂數字格式"輸入所需位數的0，例如在時間欄位公式就是0000，日跟月則是00***
-![螢幕擷取畫面 2023-12-13 153212](https://github.com/Filieka/Line_script/assets/144932126/7148755a-3479-4fd3-80de-4cf7b4e8f253)
-### 11.回到程式碼中將所需的時間迴圈及資料範圍進行修改
+![螢幕擷取畫面 2023-12-13 154720](https://github.com/Filieka/Line_script/assets/144932126/aa0861dc-3808-46d5-bbf5-9a600adb996b)
+### 11.回到程式碼中將所需的時間迴圈及資料範圍進行修改，以下是需要修改的範圍
+![螢幕擷取畫面 2023-12-13 154830](https://github.com/Filieka/Line_script/assets/144932126/f354ddd1-a628-455c-9105-fe6fbaf69273)
