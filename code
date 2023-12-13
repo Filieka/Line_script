@@ -1,0 +1,85 @@
+function doPost1() {
+
+  // 選擇試算表&活動頁
+  var spreadsheet_id;             // 試算表id
+  var activesheet_name;           // 活動頁名稱
+  // 讀取活動頁資料
+  var data_number;                   // 資料筆數
+  var data;
+  // Line傳送訊息
+  var line_token = "Your token";           // nitify群組的token
+  var line_message;                                                         // 要傳送的訊息
+  // 時間
+  var current_times_array = getCurrentTime();
+  var current_year = current_times_array[0];
+  var current_month = current_times_array[1];
+  var current_date = current_times_array[2];
+  var current_times = current_times_array[3];
+  var current_weekday = current_times_array[4];
+  
+
+
+
+  // weekly task
+  // 設定參數
+  spreadsheet_id = 'Your sheet id';
+  activesheet_name = 'Your sheet name';
+  var spreadsheet = SpreadsheetApp.openById(spreadsheet_id);
+  var activesheet = spreadsheet.getSheetByName(activesheet_name);
+  data_number = activesheet.getLastRow();
+  var range = activesheet.getRange(2, 1, data_number, 5); // 取不包含標題的range
+  var data = range.getValues(); // range 轉成 array
+  for (row=0; row<data_number; row++){
+    if (data[row][0] == current_year){ // 年份相同
+      if (data[row][1] == current_month){ // 月相同
+        if(data[row][2] == current_date){ // 日相同
+          if(data[row][3] == current_times){ // 時間相同
+            line_message = data[row][4];
+            SendLineNotify(line_message, line_token);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 回傳目前時間
+function getCurrentTime(){
+  var taiwam_timezone = "GMT+8" // 設定台灣時區
+  var date = new Date();
+
+  var current_time = Utilities.formatDate(date, taiwam_timezone, "yyyy MM dd HHmm");
+  var current_times_array = current_time.split(" ");
+
+  var dayOfWeek = date.getDay(); // 取得星期幾
+  if (dayOfWeek === 0){
+    dayOfWeek = 7;
+  }
+
+  current_times_array.push(dayOfWeek.toString());
+
+
+  return current_times_array;
+  
+}
+
+
+
+
+
+function SendLineNotify(message, token, stickerPackageId, stickerId){
+  var options =
+   {
+     "method"  : "post",
+     "payload" : 
+     {
+       "message" : message,
+       "stickerPackageId" :  stickerPackageId ,
+       "stickerId" :  stickerId 
+     },
+     "headers" : {"Authorization" : "Bearer " + token}
+   };
+   UrlFetchApp.fetch("https://notify-api.line.me/api/notify", options);
+}
+
+// 對LineNotify指定的聊天室傳送訊息
